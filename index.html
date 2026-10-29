@@ -94,6 +94,11 @@ h2{font-size:clamp(23px,5.4vw,32px);line-height:1.19;max-width:100%;margin:0 0 1
 .contact-actions .contact:first-child{background:linear-gradient(115deg,#00a947,#00d765)!important;border-color:#81ffb2!important;box-shadow:0 8px 24px #00c85355,inset 0 2px 1px #ffffff77!important}
 .contact-actions .contact:last-child{background:linear-gradient(115deg,#087be9,#24b8fa)!important;border-color:#a2eaff!important;box-shadow:0 8px 24px #229ed955,inset 0 2px 1px #ffffff77!important}
 .contact-actions .contact{font-weight:750}
+
+/* Approved inward-facing phone pose: counterclockwise tilt, preserve readable screen */
+.phone.photo-phone{transform:rotate(-10deg)!important;transform-origin:50% 55%!important}
+@media(max-width:740px){.phone.photo-phone{transform:rotate(-10deg)!important;right:6%!important;top:112px!important}}
+@media(max-width:390px){.phone.photo-phone{right:3%!important;top:132px!important}}
 </style></head>
 <body><main><section class="hero"><div class="masthead"><div class="hero-brand"><div class="logo-stack"><img class="original-logo" src="https://natural-trust-production-c416.up.railway.app/images/images/Futurystyczne%20logo%20ATLAS%20Smart%20Library.png" alt="ATLAS SMART LIBRARY" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="logo-fallback" style="display:none"><h1>ATLAS</h1><div class="subtitle">SMART LIBRARY</div></div></div><svg class="atlas-hologram" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs><radialGradient id="atlasGlow"><stop stop-color="#aeb8ff" stop-opacity=".20"/><stop offset="1" stop-color="#aeb8ff" stop-opacity="0"/></radialGradient></defs>
