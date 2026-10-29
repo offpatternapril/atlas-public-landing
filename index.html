@@ -99,6 +99,16 @@ h2{font-size:clamp(23px,5.4vw,32px);line-height:1.19;max-width:100%;margin:0 0 1
 .phone.photo-phone{transform:rotate(-10deg)!important;transform-origin:50% 55%!important}
 @media(max-width:740px){.phone.photo-phone{transform:rotate(-10deg)!important;right:6%!important;top:112px!important}}
 @media(max-width:390px){.phone.photo-phone{right:3%!important;top:132px!important}}
+
+/* Reference layout: right-positioned handset, angled toward page center */
+@media(max-width:740px){
+.hero-stage{height:475px!important}
+.phone.photo-phone{top:128px!important;right:1%!important;width:min(48vw,285px)!important;max-width:min(48vw,285px)!important;transform:perspective(800px) rotateY(-14deg) rotate(-8deg)!important;transform-origin:50% 50%!important}
+.description{width:48%!important;position:relative;z-index:3}
+.primary{top:358px!important;left:17%!important;z-index:5}
+.contacts{margin-top:0!important}
+}
+@media(max-width:390px){.hero-stage{height:492px!important}.phone.photo-phone{top:148px!important;right:0!important;width:48vw!important}.primary{top:375px!important;left:13%!important}}
 </style></head>
 <body><main><section class="hero"><div class="masthead"><div class="hero-brand"><div class="logo-stack"><img class="original-logo" src="https://natural-trust-production-c416.up.railway.app/images/images/Futurystyczne%20logo%20ATLAS%20Smart%20Library.png" alt="ATLAS SMART LIBRARY" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="logo-fallback" style="display:none"><h1>ATLAS</h1><div class="subtitle">SMART LIBRARY</div></div></div><svg class="atlas-hologram" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs><radialGradient id="atlasGlow"><stop stop-color="#aeb8ff" stop-opacity=".20"/><stop offset="1" stop-color="#aeb8ff" stop-opacity="0"/></radialGradient></defs>
