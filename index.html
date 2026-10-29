@@ -138,7 +138,7 @@ h2{font-size:clamp(23px,5.4vw,32px);line-height:1.19;max-width:100%;margin:0 0 1
 @media(max-width:740px){.contacts{margin-top:38px!important;padding-bottom:30px!important}}
 
 /* ATLAS editorial typography refinement: headings and description only */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
 .copy #heading{font-family:'Manrope',Inter,system-ui,sans-serif!important;font-weight:700!important;letter-spacing:-.035em!important;line-height:1.22!important;font-size:clamp(27px,3.25vw,40px)!important}
 .copy #description{font-family:'Manrope',Inter,system-ui,sans-serif!important;font-weight:400!important;letter-spacing:-.012em!important;line-height:1.55!important}
 @media(max-width:740px){.copy #heading{font-size:clamp(25px,5.5vw,34px)!important;line-height:1.27!important}.copy #description{font-size:clamp(13px,3.2vw,15px)!important;line-height:1.58!important}}
@@ -147,12 +147,18 @@ h2{font-size:clamp(23px,5.4vw,32px);line-height:1.19;max-width:100%;margin:0 0 1
 @media(max-width:740px){.copy #heading{font-size:clamp(22px,5vw,29px)!important;line-height:1.3!important;letter-spacing:-.03em!important;margin-bottom:21px!important}.copy #description{width:51%!important;font-size:clamp(13px,3.15vw,15px)!important;line-height:1.67!important;letter-spacing:0!important;max-width:290px!important}}
 
 /* Unified Onest typography across all landing page languages */
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap');
+
 :root,body,button,a,.language-tabs button,.primary,.contact,.contacts h3{font-family:'Onest',system-ui,sans-serif!important}
 .copy #heading{font-family:'Onest',system-ui,sans-serif!important;font-weight:500!important;letter-spacing:-.025em!important;overflow-wrap:normal!important;hyphens:none!important}
 .copy #description{font-family:'Onest',system-ui,sans-serif!important;font-weight:400!important;letter-spacing:0!important;hyphens:none!important}
 @media(max-width:740px){.copy #heading{font-size:clamp(21px,4.75vw,28px)!important;line-height:1.33!important}.copy #description{font-size:clamp(13px,3.15vw,15px)!important;line-height:1.65!important}}
-</style></head>
+
+/* Unified Rubik typography: softer geometric Cyrillic and Latin */
+:root,body,button,a,.language-tabs button,.primary,.contact,.contacts h3,.copy #heading,.copy #description{font-family:'Rubik',system-ui,sans-serif!important}
+.copy #heading{font-weight:500!important;letter-spacing:-.02em!important;line-height:1.33!important}
+.copy #description{font-weight:400!important;letter-spacing:0!important;line-height:1.65!important}
+@media(max-width:740px){.copy #heading{font-size:clamp(21px,4.7vw,28px)!important}.copy #description{font-size:clamp(13px,3.15vw,15px)!important}}
+</style><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet"></head>
 <body><main><section class="hero"><div class="masthead"><div class="hero-brand"><div class="logo-stack"><img class="original-logo" src="https://natural-trust-production-c416.up.railway.app/images/images/Futurystyczne%20logo%20ATLAS%20Smart%20Library.png" alt="ATLAS SMART LIBRARY" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="logo-fallback" style="display:none"><h1>ATLAS</h1><div class="subtitle">SMART LIBRARY</div></div></div><svg class="atlas-hologram" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs><radialGradient id="atlasGlow"><stop stop-color="#aeb8ff" stop-opacity=".20"/><stop offset="1" stop-color="#aeb8ff" stop-opacity="0"/></radialGradient></defs>
     <circle cx="80" cy="80" r="72" fill="url(#atlasGlow)"/>
