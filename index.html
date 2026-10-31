@@ -170,6 +170,20 @@ h2{font-size:clamp(23px,5.4vw,32px);line-height:1.19;max-width:100%;margin:0 0 1
  .hero-stage .copy #description{display:block;width:100%!important;max-width:100%!important;font-size:clamp(12px,3.15vw,15px)!important;line-height:1.5!important;text-align:left!important;overflow-wrap:normal!important;hyphens:none!important}
 }
 
+/* Isolated catalog/chat entry: no sound, accessible motion preference. */
+.atlas-chat-entry{position:relative;display:flex;align-items:center;gap:10px;margin:12px 0 6px;min-width:0}
+.atlas-chat-button{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:64px;padding:12px 10px;border:1px solid rgba(255,255,255,.25);border-radius:16px;background:linear-gradient(115deg,#087c70,#118d75 55%,#2fa483);color:#fff!important;text-decoration:none;box-shadow:0 5px 16px #0b1a3b25;text-align:center}
+.atlas-chat-title{font-size:16px;font-weight:700;line-height:1.25}.atlas-chat-subtitle{font-size:11px;font-weight:400;line-height:1.35;color:#e1f8f3}
+.atlas-chat-mascot-link{flex:0 0 92px;width:92px;height:100px;display:block;position:relative;border-radius:16px;text-decoration:none;background:transparent!important;-webkit-tap-highlight-color:transparent}
+.atlas-chat-mascot{position:absolute;inset:0;display:block;animation:atlasBipFloat 4.5s ease-in-out infinite;transform-origin:50% 80%;pointer-events:none}
+.atlas-chat-mascot img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 3px 7px #0c1c4633)}
+.atlas-chat-robot-body{clip-path:url(#atlasBipBodyClip)}.atlas-chat-robot-hand{clip-path:url(#atlasBipHandClip);transform-origin:75% 66%;animation:atlasBipWave 7s ease-in-out infinite}
+.atlas-chat-clip-defs{position:absolute;pointer-events:none;overflow:hidden}.atlas-chat-button:focus-visible,.atlas-chat-mascot-link:focus-visible{outline:2px solid #79e8dd;outline-offset:4px}
+@keyframes atlasBipFloat{0%,100%{transform:translateY(2px) rotate(-1deg)}50%{transform:translateY(-3px) rotate(1deg)}}
+@keyframes atlasBipWave{0%,65%,100%{transform:rotate(0)}70%,82%{transform:rotate(10deg)}76%,88%{transform:rotate(-5deg)}94%{transform:rotate(0)}}
+@media(max-width:360px){.atlas-chat-mascot-link{flex-basis:78px;width:78px;height:86px}.atlas-chat-title{font-size:15px}.atlas-chat-subtitle{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.atlas-chat-mascot,.atlas-chat-robot-hand{animation:none!important;transform:none!important}}
+.hero>.atlas-chat-entry{max-width:460px;margin:12px auto 16px}.hero>.atlas-chat-entry+.contacts{margin-top:20px!important}.atlas-chat-button{font-family:inherit}.atlas-chat-mascot img{max-width:none}.atlas-chat-clip-defs{width:0;height:0}
 </style><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet"></head>
 <body><main><section class="hero"><div class="masthead"><div class="hero-brand"><div class="logo-stack"><img class="original-logo" src="https://natural-trust-production-c416.up.railway.app/images/images/Futurystyczne%20logo%20ATLAS%20Smart%20Library.png" alt="ATLAS SMART LIBRARY" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="logo-fallback" style="display:none"><h1>ATLAS</h1><div class="subtitle">SMART LIBRARY</div></div></div><svg class="atlas-hologram" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs><radialGradient id="atlasGlow"><stop stop-color="#aeb8ff" stop-opacity=".20"/><stop offset="1" stop-color="#aeb8ff" stop-opacity="0"/></radialGradient></defs>
@@ -178,7 +192,13 @@ h2{font-size:clamp(23px,5.4vw,32px);line-height:1.19;max-width:100%;margin:0 0 1
     <g class="atlas-orbit" stroke="#fff" stroke-width="1.1" opacity=".86"><ellipse cx="80" cy="80" rx="69" ry="24" transform="rotate(-32 80 80)"/><circle cx="19" cy="110" r="3" fill="#fff" stroke="none"/></g>
     <g class="atlas-orbit atlas-orbit-reverse" stroke="#DDE4FF" stroke-width=".8" opacity=".75"><ellipse cx="80" cy="80" rx="66" ry="28" transform="rotate(47 80 80)"/><circle cx="142" cy="100" r="2.5" fill="#fff" stroke="none"/></g>
     <g stroke="#fff" stroke-width=".8" opacity=".85"><path d="M80 17v14m-7-7h14M134 27v12m-6-6h12M27 40v9m-4.5-4.5h9M126 133v11m-5.5-5.5h11"/><circle cx="80" cy="17" r="2"/><circle cx="142" cy="57" r="1.5"/></g>
-  </svg></div><nav class="language-tabs" aria-label="Выбор языка"><button type="button" data-lang="ru" aria-pressed="true">RU</button><button type="button" data-lang="uk" aria-pressed="false">UA</button><button type="button" data-lang="pl" aria-pressed="false">PL</button><button type="button" data-lang="be" aria-pressed="false">BY</button><button type="button" data-lang="en" aria-pressed="false">EN</button></nav></div><div class="hero-stage"><div class="copy"><h2 id="heading">Твоя Польша. Твой ATLAS</h2><p class="description" id="description">Полезные ресурсы, сервисы и специалисты для жизни в Польше. Всё под рукой — быстро и бесплатно.</p></div><div class="phone photo-phone" aria-label="iPhone 14 Pro Max Deep Purple"><img src="./a_clean_product_studio_style_render_on_a_transpare.png" alt="Фиолетовый iPhone 14 Pro Max" loading="eager" decoding="async"></div><a class="cta primary" id="cta" href="https://t.me/atlas_smart_library_bot" rel="noopener noreferrer"><span id="ctaText">Открыть ATLAS</span></a></div><div class="contacts"><h3 id="contactHeading">Обратная связь</h3><div class="contact-actions"><a class="cta contact" href="https://wa.me/48572600574" rel="noopener noreferrer"><span id="whatsappText">Написать в WhatsApp</span></a><a class="cta contact" href="https://t.me/offpattern_april" rel="noopener noreferrer"><span id="telegramText">Написать в Telegram</span></a></div></div></section></main>
+  </svg></div><nav class="language-tabs" aria-label="Выбор языка"><button type="button" data-lang="ru" aria-pressed="true">RU</button><button type="button" data-lang="uk" aria-pressed="false">UA</button><button type="button" data-lang="pl" aria-pressed="false">PL</button><button type="button" data-lang="be" aria-pressed="false">BY</button><button type="button" data-lang="en" aria-pressed="false">EN</button></nav></div><div class="hero-stage"><div class="copy"><h2 id="heading">Твоя Польша. Твой ATLAS</h2><p class="description" id="description">Полезные ресурсы, сервисы и специалисты для жизни в Польше. Всё под рукой — быстро и бесплатно.</p></div><div class="phone photo-phone" aria-label="iPhone 14 Pro Max Deep Purple"><img src="./a_clean_product_studio_style_render_on_a_transpare.png" alt="Фиолетовый iPhone 14 Pro Max" loading="eager" decoding="async"></div><a class="cta primary" id="cta" href="https://t.me/atlas_smart_library_bot" rel="noopener noreferrer"><span id="ctaText">Открыть ATLAS</span></a></div><section class="atlas-chat-entry" aria-label="Бип-Болталка">
+      <a class="atlas-chat-button" id="atlasChatOpen" href="https://t.me/atlas_chat_test_bot" target="_blank" rel="noopener noreferrer"><span class="atlas-chat-title">Бип-Болталка</span><span class="atlas-chat-subtitle" id="atlasChatSubtitle">Место для своих · от ATLAS</span></a>
+      <a class="atlas-chat-mascot-link" id="atlasChatMascot" href="https://t.me/atlas_chat_test_bot" target="_blank" rel="noopener noreferrer" aria-label="Открыть Бип-Болталку">
+        <span class="atlas-chat-mascot" aria-hidden="true"><img class="atlas-chat-robot-body" src="./bip-mascot.webp" alt="" width="1254" height="1254" decoding="async"><img class="atlas-chat-robot-hand" src="./bip-mascot.webp" alt="" width="1254" height="1254" decoding="async"></span>
+      </a>
+      <svg width="0" height="0" aria-hidden="true" focusable="false" class="atlas-chat-clip-defs"><defs><clipPath id="atlasBipBodyClip" clipPathUnits="objectBoundingBox"><path d="M0 0H1V1H0Z M.78 .44H.96V.67L.74 .70L.70 .62L.76 .57Z" clip-rule="evenodd"/></clipPath><clipPath id="atlasBipHandClip" clipPathUnits="objectBoundingBox"><path d="M.78 .44H.96V.67L.74 .70L.70 .62L.76 .57Z"/></clipPath></defs></svg>
+    </section><div class="contacts"><h3 id="contactHeading">Обратная связь</h3><div class="contact-actions"><a class="cta contact" href="https://wa.me/48572600574" rel="noopener noreferrer"><span id="whatsappText">Написать в WhatsApp</span></a><a class="cta contact" href="https://t.me/offpattern_april" rel="noopener noreferrer"><span id="telegramText">Написать в Telegram</span></a></div></div></section></main>
 <script>
 const t={
 ru:["Твоя Польша. Твой ATLAS","Полезные ресурсы, сервисы и специалисты для жизни в Польше. Всё под рукой — быстро и бесплатно.","Открыть ATLAS","Обратная связь","Написать в WhatsApp","Написать в Telegram","Понедельник, 12 мая"],
@@ -187,4 +207,20 @@ pl:["Twoja Polska. Twój ATLAS","Przydatne strony, usługi i specjaliści w Pols
 be:["Твая Польшча. Твой ATLAS","Карысныя рэсурсы, сэрвісы і спецыялісты для жыцця ў Польшчы. Усё пад рукой — хутка і бясплатна.","Адкрыць ATLAS","Зваротная сувязь","Напісаць у WhatsApp","Напісаць у Telegram","Панядзелак, 12 мая"],
 en:["Your Poland. Your ATLAS","Useful resources, services and specialists for life in Poland. All in one place — quick and free.","Open ATLAS","Contact","Message on WhatsApp","Message on Telegram","Monday, May 12"]};
 document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{const l=b.dataset.lang,v=t[l];document.documentElement.lang=l;['heading','description','ctaText','contactHeading','whatsappText','telegramText','phoneDate'].forEach((id,i)=>(document.getElementById(id)||{set textContent(value){}}).textContent=v[i]);document.getElementById("heading").textContent=v[0];document.querySelectorAll('[data-lang]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)))}));
+</script><script>
+const chatLandingCopy={
+ru:["Место для своих · от ATLAS","Открыть Бип-Болталку"],
+uk:["Місце для своїх · від ATLAS","Відкрити Бип-Болталку"],
+be:["Месца для сваіх · ад ATLAS","Адкрыць Бип-Болталку"],
+pl:["Miejsce dla swoich · od ATLAS","Otwórz Бип-Болталка"],
+en:["A place for your people · by ATLAS","Open Бип-Болталка"]
+};
+function applyChatLandingLanguage(lang){
+const [subtitle,label]=chatLandingCopy[lang]||chatLandingCopy.ru;
+document.getElementById("atlasChatSubtitle").textContent=subtitle;
+document.getElementById("atlasChatOpen").setAttribute("aria-label",label);
+document.getElementById("atlasChatMascot").setAttribute("aria-label",label);
+}
+document.querySelectorAll("[data-lang]").forEach(button=>button.addEventListener("click",()=>applyChatLandingLanguage(button.dataset.lang)));
+applyChatLandingLanguage(document.documentElement.lang);
 </script></body></html>
