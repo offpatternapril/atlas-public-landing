@@ -1,0 +1,44 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Цифровые визитки — ATLAS Cards</title>
+<meta name="description" content="Создаю цифровые визитки с индивидуальным дизайном, языковыми версиями, персональной ссылкой и QR-кодом. Срок изготовления: 1–3 рабочих дня.">
+<meta name="robots" content="index,follow"><meta property="og:type" content="website"><meta property="og:title" content="Цифровые визитки — ATLAS Cards"><meta property="og:description" content="Ваша визитка — больше, чем контакты. Срок изготовления: 1–3 рабочих дня.">
+<style>
+:root{color-scheme:light dark;--bg:#faf8fc;--fg:#1d1633;--muted:#5b5275;--card:#ffffff;--line:#e4dcf2;--accent:#6b3fd4;--accent-fg:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#120d24;--fg:#f3effc;--muted:#b9b0d4;--card:#1c1536;--line:#352b5a;--accent:#9b79ff;--accent-fg:#120d24}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:720px;margin:0 auto;padding:20px 16px 56px}
+.lang{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;margin-bottom:24px}
+.lang button{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:7px 14px;font:600 13px system-ui;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+h1{font-size:clamp(28px,7vw,42px);line-height:1.15;margin:0 0 12px;letter-spacing:-.02em}
+.lead{font-size:clamp(17px,4.2vw,20px);color:var(--muted);margin:0 0 28px}
+ul{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:12px}
+li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+li strong{display:block;font-size:17px}li span{color:var(--muted)}
+.time{font-weight:700;font-size:18px;margin:0 0 24px}
+.actions{display:grid;gap:12px;margin-bottom:20px}
+@media(min-width:560px){.actions{grid-template-columns:1fr 1fr}}
+.btn{display:block;text-align:center;text-decoration:none;font-weight:700;border-radius:14px;padding:14px 16px;min-height:48px}
+.tg{background:#229ed9;color:#fff}.wa{background:#1fa855;color:#fff}
+.ex{display:inline-block;color:var(--accent);font-weight:600}
+h2{font-size:15px;margin:0 0 10px;color:var(--muted);font-weight:600}
+</style></head><body><main>
+<nav class="lang" id="lang" aria-label="Language"></nav>
+<h1 id="h"></h1><p class="lead" id="lead"></p>
+<ul id="features"></ul>
+<p class="time" id="time"></p>
+<h2 id="order"></h2>
+<div class="actions"><a class="btn tg" id="tg" href="https://t.me/offpattern_april" rel="noopener noreferrer"></a><a class="btn wa" id="wa" href="https://wa.me/48572600574" rel="noopener noreferrer"></a></div>
+<a class="ex" id="ex" href="https://atlas-cards-album.deeprhea16.chatgpt.site/" rel="noopener noreferrer"></a>
+</main><script>
+const T={"ru": {"title": "Цифровые визитки — ATLAS Cards", "h": "Ваша визитка — больше, чем контакты", "lead": "Создаю цифровые визитки, которые выделяют вас среди других.", "f": [["Ваш стиль", "индивидуальный дизайн."], ["Всё в одном месте", "контакты, услуги, соцсети и сайты."], ["Без языковых барьеров", "языковые версии."], ["Всегда под рукой", "персональная ссылка и QR-код."], ["Никаких приложений", "открывается прямо в браузере."]], "time": "Срок изготовления: 1–3 рабочих дня.", "order": "Заказать визитку", "tg": "Написать в Telegram", "wa": "Написать в WhatsApp", "ex": "Посмотреть примеры визиток", "nav": "Выбор языка"}, "uk": {"title": "Цифрові візитки — ATLAS Cards", "h": "Ваша візитка — більше, ніж контакти", "lead": "Створюю цифрові візитки, які вирізняють вас серед інших.", "f": [["Ваш стиль", "індивідуальний дизайн."], ["Усе в одному місці", "контакти, послуги, соцмережі та сайти."], ["Без мовних бар’єрів", "мовні версії."], ["Завжди під рукою", "персональне посилання та QR-код."], ["Жодних застосунків", "відкривається прямо в браузері."]], "time": "Термін виготовлення: 1–3 робочі дні.", "order": "Замовити візитку", "tg": "Написати в Telegram", "wa": "Написати у WhatsApp", "ex": "Переглянути приклади візиток", "nav": "Вибір мови"}, "pl": {"title": "Cyfrowe wizytówki — ATLAS Cards", "h": "Twoja wizytówka to coś więcej niż kontakty", "lead": "Tworzę cyfrowe wizytówki, które wyróżniają Cię na tle innych.", "f": [["Twój styl", "indywidualny projekt."], ["Wszystko w jednym miejscu", "kontakty, usługi, social media i strony."], ["Bez barier językowych", "wersje w różnych językach."], ["Zawsze pod ręką", "osobisty link i kod QR."], ["Żadnych aplikacji", "otwiera się prosto w przeglądarce."]], "time": "Czas realizacji: 1–3 dni robocze.", "order": "Zamów wizytówkę", "tg": "Napisz na Telegramie", "wa": "Napisz na WhatsAppie", "ex": "Zobacz przykłady wizytówek", "nav": "Wybór języka"}, "be": {"title": "Лічбавыя візітоўкі — ATLAS Cards", "h": "Ваша візітоўка — больш, чым кантакты", "lead": "Раблю лічбавыя візітоўкі, якія вылучаюць вас сярод іншых.", "f": [["Ваш стыль", "індывідуальны дызайн."], ["Усё ў адным месцы", "кантакты, паслугі, сацсеткі і сайты."], ["Без моўных бар’ераў", "моўныя версіі."], ["Заўсёды пад рукой", "асабістая спасылка і QR-код."], ["Ніякіх праграм", "адкрываецца проста ў браўзеры."]], "time": "Тэрмін вырабу: 1–3 працоўныя дні.", "order": "Замовіць візітоўку", "tg": "Напісаць у Telegram", "wa": "Напісаць у WhatsApp", "ex": "Паглядзець прыклады візітовак", "nav": "Выбар мовы"}, "en": {"title": "Digital business cards — ATLAS Cards", "h": "Your card is more than contact details", "lead": "I create digital business cards that make you stand out.", "f": [["Your style", "individual design."], ["Everything in one place", "contacts, services, social media and websites."], ["No language barriers", "language versions."], ["Always at hand", "a personal link and QR code."], ["No apps", "opens right in the browser."]], "time": "Turnaround: 1–3 business days.", "order": "Order a card", "tg": "Message on Telegram", "wa": "Message on WhatsApp", "ex": "See card examples", "nav": "Choose language"}};
+const NAMES={ru:"RU",uk:"UA",pl:"PL",be:"BY",en:"EN"};
+const nav=document.getElementById("lang");
+for(const l of Object.keys(NAMES)){const b=document.createElement("button");b.type="button";b.dataset.lang=l;b.textContent=NAMES[l];b.addEventListener("click",()=>setLang(l));nav.append(b)}
+function setLang(l){const t=T[l];if(!t)return;document.documentElement.lang=l;document.title=t.title;
+ document.getElementById("h").textContent=t.h;document.getElementById("lead").textContent=t.lead;document.getElementById("time").textContent=t.time;
+ document.getElementById("order").textContent=t.order;document.getElementById("tg").textContent=t.tg;document.getElementById("wa").textContent=t.wa;document.getElementById("ex").textContent=t.ex;
+ nav.setAttribute("aria-label",t.nav);
+ document.getElementById("features").replaceChildren(...t.f.map(([a,b])=>{const li=document.createElement("li"),s=document.createElement("strong"),p=document.createElement("span");s.textContent=a;p.textContent=b;li.append(s,p);return li}));
+ nav.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.lang===l)))}
+(function(){let l="ru";try{const q=new URLSearchParams(location.search).get("lang"),n=(navigator.language||"").slice(0,2).toLowerCase();l=T[q]?q:T[n]?n:"ru"}catch(e){}setLang(l)})();
+</script></body></html>
